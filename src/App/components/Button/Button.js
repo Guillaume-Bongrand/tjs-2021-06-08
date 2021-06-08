@@ -12,10 +12,10 @@ function Button(props) {
                 my_color ='blue';
                 break;
             case 'action':
-                my_color ='darkgreen';
+                my_color ='lightpink';
                 break;
             default:
-                my_color ='black';
+                my_color ='white';
                 break;
         }
 
