@@ -9,7 +9,7 @@ import { REST_ADR_SRV } from './config/config';
 class App extends React.Component{
   constructor(props){
     super(props);
-    this.state= {current: {titre: '', x:0, y:0, text: '', imageId: 0, fontSize: 0, color:'#0000000'}, images: []};
+    this.state= {current: {titre: '', x:0, y:0, text: '', imageId: 0, fontSize: 0, color:'#FFFFFF'}, images: []};
   }
   componentDidMount(){
     fetch(`${REST_ADR_SRV}/images`)
