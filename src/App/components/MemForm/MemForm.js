@@ -4,7 +4,7 @@ import styles from './MemForm.module.css';
 import {REST_ADR_SRV} from '../../config/config'
 
 const MemForm = (props) => {
-  const [state, setstate] = useState({titre: 'cc', x: 10, y: 20, texte: 'slt',fontSize:20,color: '#111111', imageId: 1});
+  const [state, setstate] = useState({titre: 'cc', x: 10, y: 20, texte: 'slt', fontSize:20 ,color: '#111111', imageId: 1});
   useEffect(() =>{
     props.onSubmit(state);
   },[state]);
@@ -42,7 +42,7 @@ const MemForm = (props) => {
 
       <hr />
       <label htmlFor="font-size">Taille du texte</label><br />
-      <input type="number" id="font-size" value={state.fonteSize} onChange={evt => {
+      <input type="number" id="font-size" value={state.fontSize} onChange={evt => {
         setstate({...state, fontSize: evt.target.value})
       }}/>
 

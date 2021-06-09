@@ -2,7 +2,7 @@
     display: flex;
     max-height: 80vh;
     vertical-align: middle;
-    
+
 }
 
 .FlexLayout>*:first-child{flex-grow: 1;}

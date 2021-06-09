@@ -56,6 +56,16 @@
       "color": "#f71818",
       "imageId": 1,
       "id": 4
+    },
+    {
+      "titre": "décalage réu",
+      "x": "85",
+      "y": "600",
+      "texte": "Quand on m'annonce que la réunion est décalé à 18h30",
+      "fontSize": "39",
+      "color": "#ffffff",
+      "imageId": 2,
+      "id": 5
     }
   ],
   "config": {
