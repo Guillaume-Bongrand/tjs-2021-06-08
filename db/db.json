@@ -1,0 +1,65 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "title": "jorge_julie",
+      "url": "jorge_julie.jpg",
+      "w": 259,
+      "h": 194
+    },
+    {
+      "title": "macron_poker_face",
+      "url": "macron.jpg",
+      "w": 1136,
+      "h": 663,
+      "id": 2
+    },
+    {
+      "title": "saut de licorne",
+      "url": "unicorn_fart.png",
+      "w": 275,
+      "h": 183,
+      "id": 3
+    }
+  ],
+  "memes": [
+    {
+      "id": 1,
+      "title": "meme moi",
+      "text": "",
+      "x": 100,
+      "y": 100,
+      "imageId": 1
+    },
+    {
+      "id": 2,
+      "title": "meme toi",
+      "text": "",
+      "x": 100,
+      "y": 100,
+      "imageId": 2
+    },
+    {
+      "id": 3,
+      "title": "meme moi",
+      "text": "",
+      "x": 100,
+      "y": 100,
+      "imageId": 3
+    },
+    {
+      "titre": "cc",
+      "x": 10,
+      "y": 20,
+      "texte": "slt",
+      "fontSize": "20",
+      "color": "#f71818",
+      "imageId": 1,
+      "id": 4
+    }
+  ],
+  "config": {
+    "title": "meme.js",
+    "author": "guillaume B"
+  }
+}
