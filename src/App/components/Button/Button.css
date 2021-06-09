@@ -6,6 +6,7 @@
     background-color: lightpink;
     padding: 5px 10px;
     margin: 5px;
+    /* box-shadow: 30px 30px 30px gray; */
 }
 .Button:hover{
     filter: grayscale(40%);
@@ -16,6 +17,6 @@
   max-height: auto;
 }
 
-/* .clicked{
+.clicked{
     box-shadow: 10px 10px 25px gray;
-} */
+}

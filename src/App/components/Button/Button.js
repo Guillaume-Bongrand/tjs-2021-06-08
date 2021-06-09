@@ -1,9 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Button.css'
 import PropTypes from 'prop-types'
 
 function Button(props) {
-
+    const [clicked, setClicked] = useState(false);
     let my_color = null;
     switch(props.type){
         case 'verb':
@@ -20,8 +20,10 @@ function Button(props) {
             break;
     }
 
-    return <button className="Button clicked" 
+    return <button className={`Button${clicked? ' clicked': ''}`} 
         onClick={(evt) =>{
+            setClicked(true);
+            setTimeout(() =>{setClicked(false);},100);
             props.clicker();
         }}   
      style={{backgroundColor: my_color}}>{props.children || props.title}</button>;

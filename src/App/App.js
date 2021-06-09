@@ -1,20 +1,22 @@
-import './App.css';
-import Button from './components/Button/Button'
-function App() {
-  let count = 0;
-  return (
-    <div className="App">
-      Hola guapo
-      <hr/>
-      <Button title="Vamos" type="verb" clicker={arg => {
-        count++;
-        console.log(count);
-      }}></Button>
-      <Button title="A" type="particule"></Button>
-      <Button type="object"><img src="https://cdn2.iconfinder.com/data/icons/new-year-s-hand-drawn-basic/64/dancer_2-256.png" alt="click"/></Button>
-    </div>
-    
-  );
-}
+import React from 'react';
+import Button from './components/Button/Button';
 
+/**
+ * Main component of our app.
+ */
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={counter:1, str: "Hola"}
+  }
+  componentDidUpdate(prev){
+    console.log(this.state.counter);
+  }
+  render(){
+    return <div className="App">
+      <span>counter : {this.state.counter}</span>
+      <Button type="object" title={this.state.str} clicker={(arg) =>{this.setState({counter: this.state.counter+1});}}></Button>
+    </div>;
+  }
+}
 export default App;
