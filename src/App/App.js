@@ -1,21 +1,22 @@
 import React from 'react';
-import Button from './components/Button/Button';
-
+import FlexLayout from './components/FlexLayout/FlexLayout';
+import MemForm from './components/MemForm/MemForm';
 /**
  * Main component of our app.
  */
 class App extends React.Component{
   constructor(props){
     super(props);
-    this.state={counter:1, str: "Hola"}
-  }
-  componentDidUpdate(prev){
-    console.log(this.state.counter);
+    this.state= {current: {tritre: '', x:0, y:0, text: '', image: 0}};
   }
   render(){
     return <div className="App">
-      <span>counter : {this.state.counter}</span>
-      <Button type="object" title={this.state.str} clicker={(arg) =>{this.setState({counter: this.state.counter+1});}}></Button>
+      <FlexLayout>
+        <div>
+        </div>
+        <MemForm onSubmit={formState => this.setState({current: formState})} />
+      </FlexLayout>
+      {JSON.stringify(this.state)}
     </div>;
   }
 }
