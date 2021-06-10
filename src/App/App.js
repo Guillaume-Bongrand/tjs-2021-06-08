@@ -3,18 +3,28 @@ import FlexLayout from './components/FlexLayout/FlexLayout';
 import MemeViewer from './components/MemeViewer/MemeViewer';
 import MemForm from './components/MemForm/MemForm';
 import { REST_ADR_SRV } from './config/config';
+import store, {initialState, PUBLIC_ACTION_CURRENT} from './store/store'
 /**
  * Main component of our app.
  */
 class App extends React.Component{
   constructor(props){
     super(props);
-    this.state= {current: {titre: '', x:0, y:0, text: '', imageId: 0, fontSize: 0, color:'#FFFFFF'}, images: []};
+    this.state= {
+      current: initialState.current,
+      images: []
+    };
   }
   componentDidMount(){
-    fetch(`${REST_ADR_SRV}/images`)
-      .then(flux => flux.json())
-      .then(arr => this.setState({images: arr}))
+
+    this.setState({current: store.getState().current});
+    store.subscribe(() =>{
+      this.setState({current: store.getState().current});
+    })
+
+    // fetch(`${REST_ADR_SRV}/images`)
+    //   .then(flux => flux.json())
+    //   .then(arr => this.setState({images: arr}))
   }
   render(){
     return <div className="App">
