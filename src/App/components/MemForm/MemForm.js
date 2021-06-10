@@ -3,14 +3,17 @@ import PropTypes from 'prop-types';
 import styles from './MemForm.module.css';
 import { REST_ADR_SRV } from '../../config/config'
 import store, { initialState, PUBLIC_ACTION_CURRENT } from '../../store/store';
+import { combineReducers } from 'redux';
 
 const MemForm = (props) => {
   const [state, setState] = useState(initialState.current);
 
   useEffect(() => {
-    setState(store.getState().current);
+    //console.log("store",store);
+    //setState(store.getState().meme.current);
     store.subscribe(() => {
-      setState(store.getState().current);
+      console.log("store", store.getState().meme.current)
+      //setState(store.getState().meme.current);
     })
   }, [1]);
 
